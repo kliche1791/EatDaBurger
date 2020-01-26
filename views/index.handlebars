@@ -1,17 +1,20 @@
-<header>
-	<h1>Eat Da Burger!</h1>
-</header><!-- /header -->
+<div class="jumbotron">
+  <img href="../public/assest/img/burger.jpg" class="img-thumbnail" alt="Responsive image">
+  <h1 class="display-4" style="text-align: center;">EAT DA BURGER!</h1>
+</div>
 
-<div class="wrapper">
+<div class="container">
 	<div id="create-burger">
 		<form action="/" method="POST">
 			<input id="burger-name" type="text" name="burger_name" placeholder="Create a burger">
 			<button id="submit-btn" type="submit">Manifest</button>
 		</form>
 	</div>
+</div>
+<div class="container">
 
-	<section id="burgers-container">
-		<div id="burgers-available">
+		<div class="row">
+			<div class="col-md-6">
 			<h2>Burgers Available</h2>
 			{{#each burgers}}
 				{{#unless this.devoured}}
@@ -21,15 +24,19 @@
 				    </form>
 						{{burger_name}} <span>#{{id}}</span>
 				  </div>
+				 </div> 
 				{{/unless}}
 			{{/each}}
-		</div>
-		<div id="burgers-devoured">
-			<h2>Burger Heaven</h2>
+		
+		<div class="col-md-6">
+			<h2>Burger Heaven. what a Delicious Burger!!! </h2>
 			{{#each burgers}}
 				{{#if this.devoured}}
 				  <div class="burger">{{burger_name}} <span>#{{id}}</span></div>
 				{{/if}}
 			{{/each}}
 		</div>
-	</section>
+		</div>
+</div>
+
+
